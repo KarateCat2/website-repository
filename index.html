@@ -3,80 +3,59 @@
     <head>
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="https://loremipsum.io/">Lorem Ipsum</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://placekitten.com/">Place Kitten</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    <title>Day 5: Lab 1</title>
-    <style>
-      h1{
-        text-align:center;
-        position: relative;
-        animation-name: headerAnimation;
-        animation-duration: 5s;
-        animation-delay: 3s;
-        top: -1000px;
-        animation-fill-mode: forwards;
-      }
-      @keyframes headerAnimation{
-        0%{top: -1000px;}
-        100%{top: 0px;}
-      }
-      .text-center{ 
-        animation-name: buttonAnimation; 
-        opacity: 0; 
-        position: relative; 
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-      } 
-      @keyframes buttonAnimation{
-         0%{opacity:0;} 
-         100%{opacity:1;}
-      }
-    </style>
+      <title>Day 5: Lab 2</title>
+      <style>
+        table{
+          width: 100%;
+          top: 200px;
+        }
+        tr, th, td, table{
+          position: relative;
+          text-align: center;
+          border-collapse: collapse;
+          border: 4px solid black;
+          opacity: 0;
+          animation-duration: 5s;
+        }
+        tr, td, th, table:hover{
+        opacity:1;
+        }
+        p{
+          width: 50%;
+          position: relative;
+          animation-name: Web_Dev_Camp_Is_Good;
+          animation-duration: 5s;
+          animation-iteration-count: infinite;
+          animation-timing-function: linear;
+        }
+        @keyframes Web_Dev_Camp_Is_Good{
+          0%{background-color: red; left: 0px; top: 0px;}
+          25%{background-color: yellow; left: 500px; top: 0px;}
+          50%{background-color: blue; left: 500px; top: 50px;}
+          75%{background-color: pink; left: 0px; top: 50px;}
+          100%{background-color: red; left: 0px; top: 0px;}
+        }
+        #cats{
+          text-align: center;
+        }
+      </style>
     </head>
     <body>
-      <h1>Bootstrap</h1>
-      <div class="text-center">
-      <button type="button" class="btn btn-dark">Dark</button>
-      </div>
-      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="https://placekitten.com/g/200/300" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://placekitten.com/g/200/200" class="d-block w-100" alt="...">
-          </div>
-          <div class="carousel-item">
-            <img src="https://placekitten.com/200/200" class="d-block w-100" alt="...">
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
-      </div>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Natoque penatibus et magnis dis parturient montes nascetur ridiculus mus. Est velit egestas dui id ornare. Duis ultricies lacus sed turpis tincidunt. At quis risus sed vulputate.</p>
+      <table>
+        <tr>
+          <th>This</th>
+          <th>Is</th>
+        </tr>
+        <tr>
+           <td>A</td>
+           <td>Table</td>
+        </tr>
+      </table>
+      <div id = "cats">
+      <a href = "https://placekitten.com/"><button type="button" class="btn btn-dark">Some prefer others over this, but this is something you shouldn't miss.</button></a>
+      <a href = "https://loremipsum.io/"><button type="button" class="btn btn-danger">If sentences are hard to write, then this button would be just right.</button></a>
+      <a href = "https://getbootstrap.com/"><button type="button" class="btn btn-info">Coding is hard to master, so prebuilt code can  make you faster.</button></a>
+    </div>
     </body>
 </html>
