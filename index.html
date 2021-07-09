@@ -1,15 +1,82 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html>
-    <head> 
-      <title> Day 1: Lab 1 </title>
+    <head>
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="https://loremipsum.io/">Lorem Ipsum</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://placekitten.com/">Place Kitten</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Bootstrap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    <title>Day 4: Lab 1</title>
+    <style>
+      h1{
+        text-align:center;
+        position: relative;
+        animation-name: headerAnimation;
+        animation-duration: 5s;
+        animation-delay: 3s;
+        top: -1000px;
+        animation-fill-mode: forwards;
+      }
+      @keyframes headerAnimation{
+        0%{top: -1000px;}
+        100%{top: 0px;}
+      }
+      .text-center{ 
+        animation-name: buttonAnimation; 
+        opacity: 0; 
+        position: relative; 
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+      } 
+      @keyframes buttonAnimation{
+         0%{opacity:0;} 
+         100%{opacity:1;}
+      }
+    </style>
     </head>
     <body>
-     <h1> 1st Level 1 Header </h1>
-      <h2> 1st Level 2 Header </h2>
-       <img src="https://placekitten.com/201/301">
-     <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac felis donec et odio pellentesque diam volutpat commodo. Quis auctor elit sed vulputate mi sit amet. Mattis ullamcorper velit sed ullamcorper morbi tincidunt ornare massa eget. Cras semper auctor neque vitae tempus quam pellentesque. Viverra adipiscing at in tellus. Sem integer vitae justo eget. Ac placerat vestibulum lectus mauris ultrices eros. Vehicula ipsum a arcu cursus vitae congue mauris. Cursus euismod quis viverra nibh cras pulvinar mattis nunc. Lectus magna fringilla urna porttitor rhoncus dolor purus non enim. Porttitor lacus luctus accumsan tortor posuere ac ut. </p>
-      <h1> 2nd Level 1 Header </h1>
-       <h2> 2nd Level 2 Header </h2>
-      <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Orci eu lobortis elementum nibh tellus molestie nunc non. Ut diam quam nulla porttitor massa id neque aliquam vestibulum. Fermentum odio eu feugiat pretium nibh ipsum consequat. Ipsum dolor sit amet consectetur adipiscing elit ut. At tempor commodo ullamcorper a. Sagittis purus sit amet volutpat. <a href="https://www.youtube.com/watch?v=xosMyvzRoPM">In vitae turpis massa sed elementum.</a> Sit amet porttitor eget dolor. Aliquam faucibus purus in massa tempor nec feugiat. Auctor augue mauris augue neque. Cursus risus at ultrices mi tempus imperdiet nulla malesuada pellentesque. Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Elit at imperdiet dui accumsan sit. Vitae auctor eu augue ut lectus arcu. Eget dolor morbi non arcu risus quis varius. Varius quam quisque id diam vel quam. At augue eget arcu dictum varius duis. Eget sit amet tellus cras adipiscing enim eu turpis. </p>
+      <h1>Bootstrap</h1>
+      <div class="text-center">
+      <button type="button" class="btn btn-dark">Dark</button>
+      </div>
+      <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://placekitten.com/g/200/300" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://placekitten.com/g/200/200" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://placekitten.com/200/200" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
     </body>
 </html>
